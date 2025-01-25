@@ -1,0 +1,25 @@
+25 January 2025
+GitHub Copilot Chat
+Opening chat result
+
+Great! Let's create a simple cross-platform news feed app with a GUI using C++14. 
+
+We'll use the Qt framework for the GUI, which is cross-platform and widely used. 
+
+For the API, we'll use a news API like NewsAPI.org to fetch news articles.
+
+Here's a step-by-step guide to get you started:
+
+1.	Set up your project:
+•	Install Qt and set up your development environment.
+•	Create a new Qt Widgets Application project in Visual Studio.
+
+2.	Add dependencies:
+•	Ensure you have the necessary Qt modules (QtCore, QtGui, QtWidgets, QtNetwork).
+
+3.	Design the GUI:
+•	Use Qt Designer to create a simple interface with a search bar, a button, and a list view to display news articles.
+
+4.	Fetch and display news articles:
+•	Use Qt's QNetworkAccessManager to make HTTP requests to the NewsAPI.
+•	Parse the JSON response and display the articles in the list view.
