@@ -1,0 +1,24 @@
+Encryption Test Set Up - Python
+
+#install the cryptography library
+pip install cryptography 
+
+#encrypt and decrypt data code - use with caution
+from cryptography.fernet import Fernet
+
+# Generate a key
+key = Fernet.generate_key()
+cipher_suite = Fernet(key)
+
+# Encrypt data
+data = b"Sensitive information"
+encrypted_data = cipher_suite.encrypt(data)
+
+# Decrypt data
+decrypted_data = cipher_suite.decrypt(encrypted_data)
+
+print(f"Original Data: {data}")
+print(f"Encrypted Data: {encrypted_data}")
+print(f"Decrypted Data: {decrypted_data}")
+
+
