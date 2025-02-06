@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Sign-Up</title>
+    <style>
+        .signup-form {
+            max-width: 300px;
+            margin: auto;
+            padding: 1em;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+        }
+        .signup-form h2 {
+            margin-bottom: 1em;
+        }
+        .signup-form input[type="email"],
+        .signup-form input[type="submit"] {
+            width: 100%;
+            padding: 0.7em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-form">
+        <h2>Sign Up for News Alerts</h2>
+        <form action="YOUR_BACKEND_ENDPOINT" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <input type="submit" value="Subscribe">
+        </form>
+    </div>
+</body>
+</html>
