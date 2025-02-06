@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <script>
+        async function fetchTimeZone() {
+            try {
+                // Get user's IP address and location
+                const response = await fetch('https://ipapi.co/json/');
+                const data = await response.json();
+                const timeZone = data.timezone;
+
+                // Display the current time in the user's time zone
+                displayTime(timeZone);
+            } catch (error) {
+                console.error('Error fetching time zone:', error);
+            }
+        }
+
+        function displayTime(timeZone) {
+            const now = new Date();
+            const options = { timeZone, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const formattedTime = now.toLocaleTimeString([], options);
+            document.getElementById('clock').textContent = formattedTime;
+
+            // Update the clock every second
+            setTimeout(() => displayTime(timeZone), 1000);
+        }
+
+        window.onload = fetchTimeZone;
+    </script>
+</head>
+<body>
+    <h1>World Clock</h1>
+    <div id="clock">Loading...</div>
+</body>
+</html>
